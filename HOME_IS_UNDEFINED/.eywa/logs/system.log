@@ -1570,3 +1570,53 @@ java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.uti
 16:19:20.362 [clojure-agent-send-off-pool-6] INFO neyho.eywa.lacinia - Applying field directive to field :sliceUserRole
 16:19:20.362 [clojure-agent-send-off-pool-2] INFO neyho.eywa.lacinia - Applying field directive to field :stackUserRole
 16:19:20.391 [GraphQL Executor #481] INFO neyho.eywa.dataset - User admin deployed version DHMZ_mjerenja@1.0
+17:55:02.661 [main] INFO neyho.eywa.db.postgres - [postgres]Connected to jdbc:postgresql://localhost:5432/eywa_test PostgresDB
+17:55:02.663 [main] INFO neyho.eywa.dataset - Initializing Datasets...
+17:55:03.711 [main] ERROR neyho.eywa.dataset - Couldn't initialize Datasets...
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:346)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at next.jdbc.connection$make_connection.invokeStatic(connection.clj:452)
+	at next.jdbc.connection$make_connection.invoke(connection.clj:436)
+	at next.jdbc.connection$fn__31562.invokeStatic(connection.clj:481)
+	at next.jdbc.connection$fn__31562.invoke(connection.clj:479)
+	at next.jdbc.protocols$fn__31338$G__31333__31345.invoke(protocols.clj:25)
+	at next.jdbc$get_connection.invokeStatic(jdbc.clj:168)
+	at next.jdbc$get_connection.invoke(jdbc.clj:147)
+	at neyho.eywa.dataset.postgres$fn__33564.invokeStatic(postgres.clj:2151)
+	at neyho.eywa.dataset.postgres$fn__33564.invoke(postgres.clj:1946)
+	at neyho.eywa.dataset.core$fn__9843$G__9660__9852.invoke(core.cljc:233)
+	at neyho.eywa.dataset.postgres$fn__33564.invokeStatic(postgres.clj:2149)
+	at neyho.eywa.dataset.postgres$fn__33564.invoke(postgres.clj:1946)
+	at neyho.eywa.dataset.core$fn__9843$G__9660__9852.invoke(core.cljc:233)
+	at neyho.eywa.dataset$init$fn__26480.invoke(dataset.clj:394)
+	at neyho.eywa.dataset$init.invokeStatic(dataset.clj:393)
+	at neyho.eywa.dataset$init.invoke(dataset.clj:387)
+	at neyho.eywa.dataset$init.invokeStatic(dataset.clj:389)
+	at neyho.eywa.dataset$init.invoke(dataset.clj:387)
+	at neyho.eywa.core$_main.invokeStatic(core.clj:263)
+	at neyho.eywa.core$_main.doInvoke(core.clj:233)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at neyho.eywa.core.main(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	... 33 common frames omitted
