@@ -1,0 +1,150 @@
+{
+    "data":{
+       "searchPermission":[
+          {
+             "euuid":"52e64d64-867c-4827-a2d8-c96a9ae173d8",
+             "name":"Administration"
+          },
+          {
+             "euuid":"9a7927a4-2ae7-4f5d-8c09-a4ddcdc11645",
+             "name":"Groups"
+          },
+          {
+             "euuid":"e2d6aac4-67bb-4242-96cb-b45cb0f0aa71",
+             "name":"Roles"
+          },
+          {
+             "euuid":"8500caf8-edde-411e-9079-cd06de4f870e",
+             "name":"Users"
+          },
+          {
+             "euuid":"8a046ab5-3f18-4bb2-bacf-a0b3ef6616cc",
+             "name":"User Edit"
+          },
+          {
+             "euuid":"6734e2ae-45fe-470b-a9ac-68551ca64b36",
+             "name":"User Delete"
+          },
+          {
+             "euuid":"e93b302b-4f37-43a1-9d4b-f41435907ce7",
+             "name":"User Add"
+          },
+          {
+             "euuid":"6b01fc38-dd3e-4139-9bb2-01b30355d69e",
+             "name":"Group Edit"
+          },
+          {
+             "euuid":"9f7c16fd-68c6-4fae-90ff-69fba108d9b9",
+             "name":"Group Members"
+          },
+          {
+             "euuid":"bf0617dc-d522-4bc4-a382-15743310c1ea",
+             "name":"Group Delete"
+          },
+          {
+             "euuid":"c3c53259-5535-41b2-a7f7-a325107af0d7",
+             "name":"Group Add"
+          },
+          {
+             "euuid":"2f352f5c-f17c-4072-affa-2cc2a9e9b024",
+             "name":"Role Add"
+          },
+          {
+             "euuid":"67f5108f-ee9b-4564-8cad-bba6bfc9643d",
+             "name":"Role Delete"
+          },
+          {
+             "euuid":"e7a02410-084a-48fe-baac-c887634c79dc",
+             "name":"Role Edit"
+          },
+          {
+             "euuid":"01340f6e-c948-4455-9490-58d6ff5e43d4",
+             "name":"Role Members"
+          },
+          {
+             "euuid":"6d321670-6324-4a75-a35a-5477f64e18e9",
+             "name":"Role Members"
+          },
+          {
+             "euuid":"28d8b0bf-7647-4ff4-b799-fc72b22c06f0",
+             "name":"EYWA"
+          },
+          {
+             "euuid":"10c05ba4-de95-4f04-a90b-a2b1081a030a",
+             "name":"Data"
+          },
+          {
+             "euuid":"84447fe2-673e-4d39-8eda-aeb1fb54a7ca",
+             "name":"Datasets"
+          },
+          {
+             "euuid":"c466179d-a9be-4b9c-8a3c-ac368d09cae3",
+             "name":"Explore"
+          },
+          {
+             "euuid":"27209429-fe7c-469f-96ed-65faec81afc4",
+             "name":"Add"
+          },
+          {
+             "euuid":"40308258-3463-4bf2-bd2f-7338504fdc4a",
+             "name":"Deploy"
+          },
+          {
+             "euuid":"730bef1a-0081-4900-a319-bd20a54892ce",
+             "name":"Modify"
+          },
+          {
+             "euuid":"11786a5a-244b-4f16-b9a3-d482cb70bf56",
+             "name":"Delete"
+          },
+          {
+             "euuid":"fe24b031-4199-4af2-a917-137125209f0c",
+             "name":"Dataset Version"
+          },
+          {
+             "euuid":"53079c0b-0693-4d63-aed0-37387271b344",
+             "name":"Export"
+          },
+          {
+             "euuid":"54bce61b-5089-4e5c-911a-756189abd251",
+             "name":"Save"
+          },
+          {
+             "euuid":"b41ee692-168b-4260-8f67-3d739bcda184",
+             "name":"Import"
+          },
+          {
+             "euuid":"b06d44ae-9de6-411b-9aff-a4a92069c744",
+             "name":"Delete"
+          }
+       ]
+    }
+}
+
+{
+    "data":{
+       "syncUserGroup":{
+          "euuid":"1e202508-12c3-11ef-911f-0242ac110002",
+          "active":true,
+          "modified-on":"2024-05-15T16:16:48.517Z",
+          "modified-by":{
+             "name":"admin"
+          }
+       }
+    }
+}
+ 
+{
+    "data":{
+       "searchUserGroup":[
+          {
+             "euuid":"1e202508-12c3-11ef-911f-0242ac110002",
+             "active":true,
+             "modified-on":"2024-05-15T16:16:48.517Z",
+             "modified-by":{
+                "name":"admin"
+             }
+          }
+       ]
+    }
+}
