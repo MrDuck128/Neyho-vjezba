@@ -1620,3 +1620,29 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
 	... 33 common frames omitted
+17:55:11.655 [main] INFO neyho.eywa.db.postgres - [postgres]Connected to jdbc:postgresql://localhost:5432/eywa_test PostgresDB
+17:55:11.657 [main] INFO neyho.eywa.dataset - Initializing Datasets...
+17:55:11.871 [main] INFO neyho.eywa.lacinia - Adding Lacinia shard :neyho.eywa.dataset.postgres/datasets
+17:55:12.097 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Recompiling shards: [:neyho.eywa.dataset.postgres/datasets]
+17:55:12.148 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Recompiling shards: [:neyho.eywa.dataset.postgres/datasets]
+17:55:12.148 [main] INFO neyho.eywa.lacinia - Adding Lacinia shard :neyho.eywa.dataset/dataset-directives
+17:55:12.240 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Recompiling shards: [:neyho.eywa.dataset.postgres/datasets, :neyho.eywa.dataset/dataset-directives]
+17:55:12.240 [main] INFO neyho.eywa.lacinia - Adding Lacinia shard :neyho.eywa.dataset/datasets
+17:55:12.298 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Recompiling shards: [:neyho.eywa.dataset.postgres/datasets, :neyho.eywa.dataset/dataset-directives, :neyho.eywa.dataset/datasets]
+17:55:12.298 [clojure-agent-send-off-pool-3] INFO neyho.eywa.lacinia - Applying field directive to field :deleteDataset
+17:55:12.385 [main] INFO neyho.eywa.lacinia - Adding Lacinia shard :neyho.eywa.dataset.postgres/datasets
+17:55:12.443 [clojure-agent-send-off-pool-3] INFO neyho.eywa.lacinia - Recompiling shards: [:neyho.eywa.dataset.postgres/datasets, :neyho.eywa.dataset/dataset-directives, :neyho.eywa.dataset/datasets]
+17:55:12.443 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Applying field directive to field :deleteDataset
+17:55:12.458 [main] INFO neyho.eywa.avatars.postgres - Postgres avatars initialized!
+17:55:12.458 [main] INFO neyho.eywa.administration - Initializing Administration...
+17:55:12.477 [main] INFO neyho.eywa.administration - Administration initialized
+17:55:12.478 [main] INFO neyho.eywa.lacinia - Adding Lacinia shard :neyho.eywa.administration/administration
+17:55:12.519 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Recompiling shards: [:neyho.eywa.dataset.postgres/datasets, :neyho.eywa.dataset/dataset-directives, :neyho.eywa.dataset/datasets, :neyho.eywa.administration/administration]
+17:55:12.519 [clojure-agent-send-off-pool-3] INFO neyho.eywa.lacinia - Applying field directive to field :stackPermission
+17:55:12.519 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Applying field directive to field :syncPermission
+17:55:12.519 [clojure-agent-send-off-pool-3] INFO neyho.eywa.lacinia - Applying field directive to field :syncUserRole
+17:55:12.519 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Applying field directive to field :deleteDataset
+17:55:12.519 [clojure-agent-send-off-pool-3] INFO neyho.eywa.lacinia - Applying field directive to field :sliceUserRole
+17:55:12.519 [clojure-agent-send-off-pool-1] INFO neyho.eywa.lacinia - Applying field directive to field :stackUserRole
+17:55:12.531 [main] INFO neyho.eywa.server - Starting EYWA server
+17:55:12.793 [main] INFO neyho.eywa.server - EYWA server started @ 0.0.0.0:8080
