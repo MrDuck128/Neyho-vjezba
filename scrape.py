@@ -18,8 +18,8 @@ def getData():
 
     # https://meteo.hr/podaci.php?section=podaci_vrijeme&param=hrvatska1_n&sat=01
 
-    hours = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
-    # hours = ['00']
+    # hours = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
+    hours = ['12']
 
     dataList = []
 
@@ -46,20 +46,22 @@ def getData():
             for i in range(len(data) // 8):
                 dataProcessed.append(data[i*8:(i+1)*8])
 
-        dateElement = driver.find_element(By.XPATH, '//div[@class="glavni__content"]/*/h4').text
-        date = dateElement.replace('Vrijeme u Hrvatskoj ', '').replace(' u', '').replace(' h', 'h')
+        dateElement = driver.find_element(By.XPATH, '//div[@class="glavni__content"]/*/h4').text.split(' ')
+        date = dateElement[3]
+        time = dateElement[5]
 
         for entry in dataProcessed:
             e = {
                 'postaja': entry[0],
                 'vjetar_smjer': entry[1],
-                'vjetar_brzina': float(entry[2]) if entry[2] != '-' else 0,
-                'temperatura_zraka': float(entry[3]) if entry[3] != '-' else 0,
-                'relativna_vlaznost': entry[4],
-                'tlak_zraka': float(entry[5]) if entry[5] != '-' else 0,
+                'vjetar_brzina': float(entry[2]) if entry[2] != '-' else '-',
+                'temperatura_zraka': float(entry[3]) if entry[3] != '-' else '-',
+                'relativna_vlaznost': int(entry[4]) if entry[4] != '-' else '-',
+                'tlak_zraka': float(entry[5]) if entry[5] != '-' else '-',
                 'tendencija_tlaka': entry[6],
                 'stanje_vremena': entry[7],
-                'datum_i_vrijeme': date
+                'datum': date,
+                'vrijeme': time
             }
 
             dataList.append(e)
@@ -72,9 +74,6 @@ def getData():
 
 if __name__ == '__main__':
     getData()
-
-
-def stara():
     service = Service(executable_path='chromedriver.exe')
     driver = webdriver.Chrome(service=service)
 
@@ -84,7 +83,7 @@ def stara():
 
     # hours = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']
 
-    hours = ['00', '01']
+    hours = ['00']
 
     dataList = []
 
@@ -120,11 +119,12 @@ def stara():
                 dataProcessed.append(data[i*numberOfColumns:(i+1)*numberOfColumns])
 
         columnTitles.append('Datum i vrijeme')
-        dateElement = driver.find_element(By.XPATH, '//div[@class="glavni__content"]/*/h4').text
-        date = dateElement.replace('Vrijeme u Hrvatskoj ', '').replace(' u', '').replace(' h', 'h')
+        dateElement = driver.find_element(By.XPATH, '//div[@class="glavni__content"]/*/h4').text.split(' ')
+        date = dateElement[3]
+        time = dateElement[5]
 
         for i in range(len(dataProcessed)):
-            dataProcessed[i].append(date)
+            dataProcessed[i].append((date, time))
 
         df = pd.DataFrame(dataProcessed, columns=columnTitles)
         print(f'Vrijeme u {hour} sati:')
